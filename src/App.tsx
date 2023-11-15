@@ -122,25 +122,25 @@ function App() {
   };
 
   return (
-    <div className="h-full p-8 text-slate-800 bg-redyan-400">
+    <div className="min-h-screen p-4 sm:p-8 text-slate-800 bg-redyan-400">
       <h1 className="uppercase font-bold text-center text-5xl mb-4 font-display text-redyan-200">
         Tic Tac Toe
       </h1>
-      <div>
-        <div className="grid grid-cols-3 gap-3 mx-auto w-96">
+      <div className="mx-auto sm:w-96">
+        <div className="grid grid-cols-3 gap-3 mx-auto">
           {gameState.map((player, index) => (
             <Square key={index} onClick={handleCellClick} {...{ index, player }} />
           ))}
         </div>
 
-        <div className="mx-auto w-96 text-2xl text-serif">
-          <p className="text-redyan-200 mt-5">
+        <div className="text-xl sm:text-2xl text-serif mt-5">
+          <p className="text-redyan-200">
             Next Player: <span>{currentPlayer}</span>
           </p>
-          <p className="text-redyan-200 mt-5">
+          <p className="text-redyan-200 mt-3 sm:mt-5">
             Player X wins: <span>{scores["X"]}</span>
           </p>
-          <p className="text-redyan-200 mt-5">
+          <p className="text-redyan-200 mt-3 sm:mt-5">
             Player O wins: <span>{scores["O"]}</span>
           </p>
         </div>

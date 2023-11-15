@@ -12,8 +12,8 @@ function Square({ index, onClick, player }: Props) {
     return (
         <div
             data-cell-index={index}
-            className={`rounded-xl bg-gradient-to-b from-redyan-400 to-redyan-300 h-36 border-solid border-4 border-redyan-300 font-display text-7xl text-center flex justify-center items-center cursor-pointer ${hoverStyle}`}
-            {...{ onClick }}
+            className={`rounded-xl bg-gradient-to-b from-redyan-400 to-redyan-300 h-28 sm:h-36 border-solid border-2 sm:border-4 border-redyan-300 font-display text-5xl sm:text-7xl text-center flex justify-center items-center cursor-pointer ${hoverStyle}`}
+            onClick={onClick} // corrected from {...{ onClick }}
         >
             <span
                 data-cell-index={index}
